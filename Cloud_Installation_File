@@ -1,0 +1,72 @@
+To List App's Install Locally and Cloud Steps
+
+- Have to Install Python with latest version (currently Latest 3.10)
+- Set the enviroment variable accordingly
+- Redy with the VS Code IDE.
+- clone the directory from git
+- once it's done you will receive code and all required files in your local machine.
+- After that set Virtual Env.
+  For Windows User - use pip command to install the virtualenv
+  For Mac user - use pip3 to install virtualenv
+- after it's set and install please use default terminal as CMD
+- Now Activate the virtualenv
+  For Windows User - give path where you have install the virtual enviroment - instal Virtual enviroment
+  ex. F:\Subham_python_devops>cd Test
+  F:\Subham_python_devops\Test>virtualenv -p python3.8 env1
+  F:\Subham_python_devops\Test>dir
+  Volume in drive F is New Volume
+  Volume Serial Number is F245-A2C5
+
+      			Directory of F:\Subham_python_devops\Test
+
+      			27-09-2022  16:23    <DIR>          .
+      			27-09-2022  16:23    <DIR>          ..
+      			27-09-2022  16:23    <DIR>          env1
+      		F:\Subham_python_devops\Test\env1>dir
+      			 Volume in drive F is New Volume
+      			 Volume Serial Number is F245-A2C5
+      			Directory of F:\Subham_python_devops\Test\env1
+      			27-09-2022  16:23    <DIR>          .
+      			27-09-2022  16:23    <DIR>          ..
+      			27-09-2022  16:23                42 .gitignore
+      			27-09-2022  16:23    <DIR>          Lib
+      			27-09-2022  16:23               289 pyvenv.cfg
+      			27-09-2022  16:23    <DIR>          Scripts
+      							2 File(s)           331 bytes
+      							4 Dir(s)  182,448,472,064 bytes free
+      	- Activate Virtual enviroment
+
+      		F:\Subham_python_devops\Test\env1>Scripts\activate.bat
+
+      		(env1) F:\Subham_python_devops\Test\env1>python --version
+      		Python 3.8.8
+
+  For Mac user - source <install directory path>/bin/avtivate
+
+-     Once it's done You ha install django
+
+For Windows
+
+    	- To Install Django first need to install Anaconda3 from (https://repo.anaconda.com/archive/Anaconda3-2022.05-Windows-x86_64.exe)
+    	- Once it's done
+
+---
+
+Create Todolist Project on Docker Image
+
+    -   On AWS Account Install Ubuntu
+    -   Once the Ubuntu Install Install docker
+    -   Create one Docker file --> name as "Dockerfile"
+    	    - Below is the File content which create all the things.
+    		    FROM python:3
+    		    RUN pip install django==3.2
+    		    COPY . .
+    		    RUN python manage.py migrate
+    		    CMD ["python","manage.py","runserver","0.0.0.0:8000"]
+    -   Allow Port on AWS Security group
+    -   And build the image with command ---> sudo docker build . -t todo-app
+    -   Then run the server with command -->  sudo docker run -d -p 8000:8000 81c1c30009a0 [-p stand for
+        port mapping whatever port defined in docker file need to mapping with same in docker command]
+    -   Check that app is running with docker Image on Web browser.
+
+    ******************************************************************************************************Install Jenkins
