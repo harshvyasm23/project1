@@ -1,4 +1,4 @@
-To List App's Install Locally and Cloud Steps
+# To List App's Install Locally and Cloud Steps
 
 - Have to Install Python with latest version (currently Latest 3.10)
 - Set the enviroment variable accordingly
@@ -50,9 +50,7 @@ For Windows
     	- To Install Django first need to install Anaconda3 from (https://repo.anaconda.com/archive/Anaconda3-2022.05-Windows-x86_64.exe)
     	- Once it's done
 
----
-
-Create Todolist Project on Docker Image
+# Create Todolist Project on Docker Image
 
     -   On AWS Account Install Ubuntu
     -   Once the Ubuntu Install Install docker
@@ -69,7 +67,7 @@ Create Todolist Project on Docker Image
         port mapping whatever port defined in docker file need to mapping with same in docker command]
     -   Check that app is running with docker Image on Web browser.
 
-    *****************************************************************************************************IInstall Jenkins
+# Install Jenkins
 
 - sudo docker pull jenkins/jenkins
 - Chevk with ps command that any process is runing --> sudo docker ps
