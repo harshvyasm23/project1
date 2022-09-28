@@ -69,4 +69,9 @@ Create Todolist Project on Docker Image
         port mapping whatever port defined in docker file need to mapping with same in docker command]
     -   Check that app is running with docker Image on Web browser.
 
-    ******************************************************************************************************Install Jenkins
+    *****************************************************************************************************IInstall Jenkins
+
+- sudo docker pull jenkins/jenkins
+- Chevk with ps command that any process is runing --> sudo docker ps
+- Run the docker image --> sudo docker run -d -p 8080:8080 docker.io/jenkins/jenkins:latest
+- To find initialAdminPassword run log command --> sudo docker logs 0ed35f5b120c
